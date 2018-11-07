@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->graphicsView->setScene(scene);
 
     auto world = new World();
-    std::vector<std::unique_ptr<Tile>>tiles = world->createWorld("/home/wouter/Desktop/Media_processing/worldmap4.png");
+    std::vector<std::unique_ptr<Tile>>tiles = world->createWorld("/home/wouter/Desktop/Media_processing/MP_game/worldmap4.png");
 
     float displaySize = 2.0f;
 

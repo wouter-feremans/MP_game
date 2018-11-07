@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I../world_v1 -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/mkspecs/linux-g++
+INCPATH       = -I. -Iworld_v1 -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/mkspecs/linux-g++
 QMAKE         = /mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -35,10 +35,10 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = testFinal1.0.0
-DISTDIR = /home/wouter/Desktop/Media_processing/testFinal/.tmp/testFinal1.0.0
+DISTDIR = /home/wouter/Desktop/Media_processing/MP_game/.tmp/testFinal1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/lib
-LIBS          = $(SUBLIBS) -L/home/wouter/Desktop/Media_processing/testFinal/../world_v1/ -lworld -L/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
+LIBS          = $(SUBLIBS) -L/home/wouter/Desktop/Media_processing/MP_game/world_v1/ -lworld -L/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -802,7 +802,7 @@ moc_mainwindow.cpp: /mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/incl
 		mainwindow.h \
 		moc_predefs.h \
 		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/bin/moc
-	/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/wouter/Desktop/Media_processing/testFinal/moc_predefs.h -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/wouter/Desktop/Media_processing/testFinal -I/home/wouter/Desktop/Media_processing/world_v1 -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
+	/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/bin/moc $(DEFINES) --include /home/wouter/Desktop/Media_processing/MP_game/moc_predefs.h -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/mkspecs/linux-g++ -I/home/wouter/Desktop/Media_processing/MP_game -I/home/wouter/Desktop/Media_processing/MP_game/world_v1 -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui -I/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtCore -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include mainwindow.h -o moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -939,10 +939,23 @@ main.o: main.cpp mainwindow.h \
 		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qdesktopwidget.h \
 		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qguiapplication.h \
 		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qinputmethod.h \
-		../world_v1/world.h \
-		../world_v1/world_global.h \
+		world_v1/world.h \
+		world_v1/world_global.h \
 		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtCore/QObject \
-		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/QImage
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/QImage \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QLabel \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qlabel.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qframe.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QGraphicsScene \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qpen.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QGraphicsView \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qgraphicsview.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qpainter.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qtextoption.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qscrollarea.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QWidget
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o main.cpp
 
 mainwindow.o: mainwindow.cpp mainwindow.h \
@@ -1052,7 +1065,44 @@ mainwindow.o: mainwindow.cpp mainwindow.h \
 		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qtouchdevice.h \
 		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qtabwidget.h \
 		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qicon.h \
-		ui_mainwindow.h
+		ui_mainwindow.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtCore/QVariant \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QApplication \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qapplication.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtCore/qcoreapplication.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtCore/qeventloop.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qguiapplication.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qinputmethod.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QGraphicsView \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qgraphicsview.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qpainter.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qtextoption.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/qpen.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qscrollarea.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qframe.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qgraphicsscene.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QMenuBar \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qmenubar.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qmenu.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qaction.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qactiongroup.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QStatusBar \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qstatusbar.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QToolBar \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qtoolbar.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QVBoxLayout \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qboxlayout.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qlayout.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/qgridlayout.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QWidget \
+		world_v1/world.h \
+		world_v1/world_global.h \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtCore/QObject \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtGui/QImage \
+		/mnt/23b2af5d-d924-e941-8e0a-4723457d59b7/5.11.2/gcc_64/include/QtWidgets/QGraphicsScene
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o mainwindow.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 

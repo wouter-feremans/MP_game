@@ -39,9 +39,9 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../world_v1/release/ -lworld
-else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../world_v1/debug/ -lworld
-else:unix: LIBS += -L$$PWD/../world_v1/ -lworld
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/world_v1/release/ -lworld
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/world_v1/debug/ -lworld
+else:unix: LIBS += -L$$PWD/world_v1/ -lworld
 
-INCLUDEPATH += $$PWD/../world_v1
-DEPENDPATH += $$PWD/../world_v1
+INCLUDEPATH += $$PWD/world_v1
+DEPENDPATH += $$PWD/world_v1
